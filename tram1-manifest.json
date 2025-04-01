@@ -1,27 +1,23 @@
 {
-   "$schema": "https://schemas.botframework.com/schemas/skills/v2.2/skill-manifest.json",
-   "$id": "freshbot-1dc3eee7-f785-494f-a7d2-c16fc719db77",
-   "endpoints": [
+ "$schema": "https://schema.botframework.com/schemas/skill-manifest-2.1.json",
+ "name": "test1rSkill",
+ "id": "test1rSkill",
+ "version": "1.0",
+ "description": "Skill for test1r bot hosted in Azure",
+ "publisherName": "Gimbal Technologies",
+ "privacyUrl": "https://example.com/privacy",
+ "termsOfUseUrl": "https://example.com/terms",
+ "endpoint": {
+   "msAppId": "87bc0fcc-f353-42cf-acb6-9d16a3080763",
+   "endpointUrl": "https://test1r.azurewebsites.net/api/messages"
+ },
+ "activities": {
+   "triggers": [
      {
-       "name": "americas",
-       "protocol": "BotFrameworkV3",
-       "description": "Production  endpoint for SkillBot in the Americas",
-       "endpointUrl": "https://ead9-2607-fb10-7231-1-00-3c2.ngrok-free.app/api/messages",
-       "msAppId": "f2e20fdf-b728-4d88-af79-273f8b8d0fce"
-     }
- 
- 
-   ],
-   "name": "skillbot",
-   "version": "v3",
-   "publisherName": "Cloudatica",
-   "activities": {
-     "DynamicQuestion": {
        "type": "event",
-       "name": "GetWeather"
-     },
-     "conversationUpdate": {
-       "type": "conversationUpdate"
+       "name": "Test1rTrigger",
+       "description": "Entry point to trigger test1r bot from PVA"
      }
-   }
+   ]
  }
+}
