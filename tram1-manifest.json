@@ -1,18 +1,124 @@
 {
-  "$schema": "https://schema.botframework.com/schemas/skill-manifest-2.1.json",
-  "name": "test1rSkill",
-  "id": "test1rSkill",
-  "version": "1.0",
-  "description": "Skill for test1r bot hosted in Azure",
-  "publisherName": "ram",
-  "endpoint": {
-    "msAppId": "87bc0fcc-f353-42cf-acb6-9d16a3080763",
-    "endpointUrl": "https://test1r.azurewebsites.net/api/messages"
+  "$schema": "https://schemas.botframework.com/schemas/skills/skill-manifest-2.1.preview-0.json",
+  "$id": "SampleSkill",
+  "name": "SampleSkill",
+  "description": "SampleSkill description",
+  "publisherName": "Your Company",
+  "version": "1.1",
+  "iconUrl": "https://test1r.azurewebsites.net/api/messages/SampleSkill.png",
+  "copyright": "Copyright (c) Microsoft Corporation. All rights reserved.",
+  "license": "",
+  "privacyUrl": "https://test1r.azurewebsites.net/api/messages/privacy.html",
+  "tags": [
+    "sample",
+    "skill"
+  ],
+  "endpoints": [
+    {
+      "name": "production",
+      "protocol": "BotFrameworkV3",
+      "description": "Production endpoint for the SampleSkill",
+      "endpointUrl": "https://test1r.azurewebsites.net/api/messages",
+      "msAppId": "87bc0fcc-f353-42cf-acb6-9d16a3080763"
+    }
+  ],
+  "dispatchModels": {
+    "languages": {
+      "en-us": [
+        {
+          "id": "SampleSkillLuModel-en",
+          "name": "CalendarSkill LU (English)",
+          "contentType": "application/lu",
+          "url": "file://SkillSample.lu",
+          "description": "English language model for the skill"
+        }
+      ],
+      "de-de": [
+        {
+          "id": "SampleSkillLuModel-de",
+          "name": "CalendarSkill LU (German)",
+          "contentType": "application/lu",
+          "url": "file://SkillSample.lu",
+          "description": "German language model for the skill"
+        }
+      ],
+      "es-es": [
+        {
+          "id": "SampleSkillLuModel-es",
+          "name": "CalendarSkill LU (Spanish)",
+          "contentType": "application/lu",
+          "url": "file://SkillSample.lu",
+          "description": "Spanish language model for the skill"
+        }
+      ],
+      "fr-fr": [
+        {
+          "id": "SampleSkillLuModel-fr",
+          "name": "CalendarSkill LU (French)",
+          "contentType": "application/lu",
+          "url": "file://SkillSample.lu",
+          "description": "French language model for the skill"
+        }
+      ],
+      "it-it": [
+        {
+          "id": "SampleSkillLuModel-it",
+          "name": "CalendarSkill LU (Italian)",
+          "contentType": "application/lu",
+          "url": "file://SkillSample.lu",
+          "description": "Italian language model for the skill"
+        }
+      ],
+      "zh-cn": [
+        {
+          "id": "SampleSkillLuModel-zh",
+          "name": "CalendarSkill LU (Chinese)",
+          "contentType": "application/lu",
+          "url": "file://SkillSample.lu",
+          "description": "Chinese language model for the skill"
+        }
+      ]
+    },
+    "intents": {
+      "Sample": "#/activities/message",
+      "*": "#/activities/message"
+    }
   },
   "activities": {
-    "Test1rTrigger": {
+    "sampleAction": {
+      "description": "Sample action which accepts an input object and returns an object back.",
       "type": "event",
-      "description": "Trigger to invoke test1r skill"
+      "name": "SampleAction",
+      "value": {
+        "$ref": "#/definitions/inputObject"
+      },
+      "resultValue": {
+        "$ref": "#/definitions/responseObject"
+      }
+    },
+    "message": {
+      "type": "message",
+      "description": "Receives the users utterance and attempts to resolve it using the skill's LU models"
+    }
+  },
+  "definitions": {
+    "inputObject": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "The users name."
+        }
+      }
+    },
+    "responseObject": {
+      "type": "object",
+      "properties": {
+        "customerId": {
+          "type": "integer",
+          "description": "A customer identifier."
+        }
+      }
     }
   }
 }
