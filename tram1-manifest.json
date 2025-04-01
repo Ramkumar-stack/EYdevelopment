@@ -14,7 +14,7 @@
  "activities": {
    "Test1rTrigger": {
      "type": "event",
-     "description": "Entry point to trigger test1r bot from PVA"
+     "description": "Trigger to invoke test1r skill"
    }
  }
 }
