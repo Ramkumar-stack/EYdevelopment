@@ -1,21 +1,21 @@
 {
  "$schema": "https://schema.botframework.com/schemas/skill-manifest-2.1.json",
- "name": "Tram1Skill",
- "id": "Tram1Skill",
+ "name": "test1rSkill",
+ "id": "test1rSkill",
  "version": "1.0",
- "description": "Tram1 Skill for PVA",
- "publisherName": "YourNameOrOrg",
- "privacyUrl": "https://yoursite.com/privacy",
- "termsOfUseUrl": "https://yoursite.com/terms",
+ "description": "Skill for test1r bot hosted in Azure",
+ "publisherName": "Gimbal Technologies",
+ "privacyUrl": "https://example.com/privacy",
+ "termsOfUseUrl": "https://example.com/terms",
  "endpoint": {
-   "msAppId": "53d8e244-94cd-4f99-ad94-3d4c5542cd6d",
-   "endpointUrl": "https://tram1.azurewebsites.net/api/messages"
+   "msAppId": "87bc0fcc-f353-42cf-acb6-9d16a3080763",
+   "endpointUrl": "https://test1r.azurewebsites.net/api/messages"
  },
  "activities": {
    "triggers": [
      {
        "type": "event",
-       "name": "Tram1Trigger"
+       "name": "Test1rTrigger"
      }
    ]
  }
