@@ -12,11 +12,9 @@
    "endpointUrl": "https://test1r.azurewebsites.net/api/messages"
  },
  "activities": {
-   "triggers": [
-     {
-       "type": "event",
-       "name": "Test1rTrigger"
-     }
-   ]
+   "Test1rTrigger": {
+     "type": "event",
+     "description": "Trigger to invoke test1r skill"
+   }
  }
 }
