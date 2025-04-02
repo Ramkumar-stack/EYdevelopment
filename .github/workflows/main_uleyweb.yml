@@ -51,8 +51,8 @@ jobs:
         with:
           name: node-app
 
-      - name: Unzip artifact for deployment
-        run: unzip release.zip
+      - name: Prepare app for deployment
+        run: echo "No Zip required if source is already present"
       
       - name: 'Deploy to Azure Web App'
         id: deploy-to-webapp
