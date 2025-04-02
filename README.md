@@ -1,4 +1,4 @@
-# Welcome to your new bot 1111
+# Welcome to your new bot 11
 
 This bot project was created using the Empty Bot template, and contains a minimal set of files necessary to have a working bot.
 
